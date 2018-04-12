@@ -5,17 +5,23 @@
 
 This is a project that is trying to use HTTP/HTTP2 on the back-end.
 
-The project has been initialised using Yarn.
+The project has been initialised using [yarn](https://yarnpkg.com/lang/en/).
 
 ## Getting started
 
 To get this project up and running:
 
-`git clone`
+```sh
+git clone
+```
 
-`yarn install`
+```
+yarn install
+```
 
-`yarn run start`
+```
+yarn run start
+````
 
 This will start the application, being available at:
 
