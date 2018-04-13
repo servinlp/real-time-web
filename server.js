@@ -22,7 +22,9 @@ const express =	        require( 'express' ),
               //cert: fs.readFileSync( path.resolve( __dirname, './keys/cert.pem' ) ),
               //passphrase: 'servin'
       }, app ),
+
       io =              require( 'socket.io' )( http_server )
+      socket =          require( './socketHandling' )
 
 app.use( express.static( 'public' ) )
 app.set( 'view engine', 'ejs' )
@@ -55,4 +57,4 @@ http_server.listen( PORT, err => console.log( `You can find me at http://localho
 https_server.listen( HTTPS_PORT, err => console.log( `You can find me at https://localhost:${ HTTPS_PORT }` ) )
 http2_server.listen( HTTP2_PORT, err => console.log( `You can find me at https://localhost:${ HTTP2_PORT }` ) )
 
-io.on( 'connection', socket ) // Not a function yet
+io.on( 'connection', socket )
